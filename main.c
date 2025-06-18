@@ -72,9 +72,9 @@ void main(void) {
    // Configure WDT in interval timer mode
     WDTCTL = WDTPW + WDTTMSEL + WDTCNTCL + WDTSSEL + WDTIS0 ;
 
-   // Set clock to 8MHz
-    BCSCTL1 = CALBC1_8MHZ;
-    DCOCTL = CALDCO_8MHZ;
+   // Set clock to 1MHz
+    BCSCTL1 = CALBC1_1MHZ;
+    DCOCTL = CALDCO_1MHZ;
 
     BCSCTL3 |= LFXT1S_2;  // ACLK = VLO (~12kHz)
 
