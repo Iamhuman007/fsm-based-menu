@@ -74,7 +74,7 @@ void I2C_Init() {
     UCB0CTL1 |= UCSWRST;    // Reset USCI module
     UCB0CTL0 = UCMST + UCMODE_3 + UCSYNC; // I2C Master, Synchronous mode
     UCB0CTL1 = UCSSEL_2 + UCSWRST; // Use SMCLK, keep in reset state
-    UCB0BR0 = 8;   // Set I2C speed to ~400kHz (SMCLK = 8MHz)
+    UCB0BR0 = 10;   // Set I2C speed to ~100kHz (SMCLK = 1MHz)
     UCB0BR1 = 0;
 
     UCB0CTL1 &= ~UCSWRST;   // Enable USCI module
